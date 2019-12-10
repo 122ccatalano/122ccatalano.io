@@ -5,57 +5,42 @@
     <title>Christopher Catalano</title>
 
     <link rel = "icon" href ="img/prem.jpg" type = "image/jpg">
-
-    <style>
-      body {
-        background-color: rgb(77,199,160);
-        background-image:url('img/backdrop.jpg');
-        background-repeat:no-repeat;
-        background-size: cover;
-      }
-      h1 {
-        text-align: center;
-        color: #0000b3;
-        font-size: 65px;
-      }
-      .light {
-        color: #ff8080;
-      }
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-      }
-      table {
-        border-color: rgb(23,115,212);
-        width: 50%;
-      }
-      th {
-        color: rgb(255,255,255);
-      }
-      td {
-        color: rgb(255,255,255);
-      }
-      a {
-        color: rgb(255,255,255);
-      }
-      #wow {
-        font-style: italic;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  </div>
+</div>
     <h1 id="wow">Christopher Catalano</h1>
-    <br/>
+    <br>
+    <table>
+      <tr>
+        <th>Home</th>
+        <th>My Projects</th>
+        <th><a href="https://122ccatalano.github.io/calendar.io/" target="_blank">My Calendar</a></th>
+      </tr>
+    </table>
     <img src="img/neymar.jpg" alt="">
     <h3><b>Contact Information</b></h3>
     <p><a href="https://www.instagram.com/christopher.catalano" target="_blank">Instagram</a>: christopher.catalano</p>
     <br>
     <h3>Projects</h3>
     <ul>
-      <li><a href="https://122ccatalano.github.io/calendar.io/" target="_blank">Calendar</a></li>
-      <li><a href="https://122ccatalano.github.io/movie.io/" target="_blank">Movie Web Page</a></li>
+      <li><a href="https://122ccatalano.github.io/calendar.io/" target="_blank">My Calendar</a></li>
+      <li><a href="https://122ccatalano.github.io/movie.io/" target="_blank">My Favorite Movie</a></li>
+      <li><a href="https://122ccatalano.github.io/products.io/" target="_blank">My Product</a></li>
+      <li><a href="https://122ccatalano.github.io/hometown.io/" target="_blank">My Hometown</a></li>
     </ul>
     <br>
     <hr>
@@ -111,5 +96,22 @@
         <td><a href="https://onefootball.com/en/home" target="_blank">OneFootball.com</a></td>
       </tr>
     </table>
+    <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
   </body>
 </html>
