@@ -4,6 +4,25 @@ body {
   background-repeat:no-repeat;
   background-size: cover;
 }
+
+@keyframes grayscale {
+  from {
+    filter: grayscale(0%);
+  }
+
+  to {
+    filter: grayscale(100%);
+  }
+}
+
+img {
+  animation: grayscale 2s forwards;
+}
+
+.about {
+  width: 100vw;
+}
+
 .navbar {
   overflow: hidden;
   background-color: #333;
