@@ -135,3 +135,23 @@ iframe {
 .half-visible {
   opacity: 0.5;
 }
+.background {
+  margin: 10px auto;
+  padding-bottom: 5px;
+  max-width: 400px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 25px;
+}
+div.animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
